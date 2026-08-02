@@ -159,7 +159,7 @@ button:active {
 }
 
 .nav-link.active::after {
-    width: 100%;
+    width: 0;
 }
 
 .nav-actions {
@@ -307,18 +307,18 @@ button:active {
 }
 
 .hero-subtitle {
-    font-size: 20px;
+    font-size: 22px;
     color: #64748b;
     font-weight: 500;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .hero-title {
     font-size: 72px;
     font-weight: 900;
     color: #0f172a;
-    line-height: 1.1;
-    margin-bottom: 18px;
+    line-height: 1.2;
+    margin-bottom: 24px;
 }
 
 .hero-highlight {
@@ -328,10 +328,10 @@ button:active {
 }
 
 .hero-role {
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 700;
     color: #1e293b;
-    margin-bottom: 22px;
+    margin-bottom: 26px;
 }
 
 .hero-role-prefix {
@@ -344,18 +344,18 @@ button:active {
 }
 
 .hero-text {
-    font-size: 17px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 1.8;
     color: #64748b;
     max-width: 520px;
-    margin-bottom: 38px;
+    margin-bottom: 45px;
 }
 
 .hero-buttons {
     display: flex;
     align-items: center;
-    gap: 18px;
-    margin-bottom: 42px;
+    gap: 24px;
+    margin-bottom: 48px;
 }
 
 .hero-btn-primary {
@@ -399,7 +399,7 @@ button:active {
 .hero-social {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 18px;
 }
 
 .hero-social-link {
@@ -606,6 +606,26 @@ button:active {
     margin-bottom: 30px;
 }
 
+.experience-card {
+    position: relative;
+    width: 50%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e7ff;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
+    border-color: #c7d2fe;
+}
+
 .about-card {
     background: #ffffff;
     padding: 20px;
@@ -614,12 +634,12 @@ button:active {
     border: 1px solid #e0e7ff;
     flex: 1;
     text-align: center;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
     border-color: #c7d2fe;
 }
 
@@ -726,12 +746,12 @@ button:active {
     gap: 10px;
     border: 1px solid #e0e7ff;
     width: 120px;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .technology-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
     border-color: #c7d2fe;
 }
 
@@ -867,15 +887,15 @@ button:active {
 .skill-card {
     background: #ffffff;
     padding: 25px;
-    border-radius: 15px;
+    border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     border: 1px solid #e0e7ff;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
     border-color: #c7d2fe;
 }
 
@@ -1007,14 +1027,16 @@ button:active {
     background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     border: 1px solid #e0e7ff;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
 }
 
 .project-img-container {
@@ -1048,6 +1070,26 @@ button:active {
     color: #64748b;
     margin-bottom: 20px;
     line-height: 1.6;
+}
+
+.project-features {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.project-features li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.project-features li i {
+    color: #4f46e5;
+    font-size: 12px;
 }
 
 .project-tags {
@@ -1160,17 +1202,17 @@ button:active {
 .service-card {
     width: calc(33.333% - 20px);
     background: #ffffff;
-    padding: 40px 30px;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     border: 1px solid #e0e7ff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    transition: 0.4s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
     border-color: #c7d2fe;
 }
 
@@ -1412,17 +1454,17 @@ button:active {
     background: #ffffff;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     border: 1px solid #e0e7ff;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    transition: 0.4s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .certificate-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.1);
 }
 
 .certificate-img-container {

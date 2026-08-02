@@ -3,7 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Ankur Maurya - PHP Full Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Ankur Maurya, a PHP Full Stack Developer specializing in responsive web applications with HTML, CSS, JavaScript, PHP, and MySQL.">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="icon" type="image/x-icon" href="assests/images/favicon.ico">
+    <link rel="canonical" href="https://ankur-maurya25.github.io/ankur-portfolio/">
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Ankur Maurya - Full Stack Developer">
+    <meta property="og:description" content="Portfolio of Ankur Maurya, a PHP Full Stack Developer specializing in responsive web applications.">
+    <meta property="og:image" content="https://ankur-maurya25.github.io/ankur-portfolio/assests/images/ankurm.png">
+    <meta property="og:url" content="https://ankur-maurya25.github.io/ankur-portfolio/">
+    <meta property="og:type" content="website">
+
     <link href="assests/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -28,16 +40,16 @@
             </ul>
             <div class="nav-actions">
                 <a href="resume.html" class="nav-btn">Resume</a>
-                <div class="nav-menu-btn" id="menuBtn">
+                <div class="nav-menu-btn" id="menuBtn" aria-label="Open Menu" role="button" tabindex="0">
                     <i class="fa-solid fa-bars"></i>
                 </div>
             </div>
         </nav>
         
         <div class="side-menu" id="sideMenu">
-            <span class="side-menu-close" id="closeBtn">&times;</span>
+            <span class="side-menu-close" id="closeBtn" aria-label="Close Menu" role="button" tabindex="0">&times;</span>
             <div class="side-menu-user">
-                <img src="images/user.png" alt="User" class="side-menu-img">
+                <img src="assests/images/user.png" alt="User Avatar" class="side-menu-img">
             </div>
             <ul class="side-menu-links">
                 <li><a href="#home" class="side-link">Home</a></li>
@@ -72,15 +84,15 @@
                 <a href="#projects" class="hero-btn-secondary"><i class="fa-solid fa-code"></i> View Projects</a>
             </div>
             <div class="hero-social" data-animate="fade-left" data-delay="700">
-                <a href="#" class="hero-social-link" target="_blank" title="GitHub">
+                <a href="https://github.com/ankur-maurya25" class="hero-social-link" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub Profile">
                     <i class="fa-brands fa-github"></i>
                     <span class="hero-social-text">GitHub</span>
                 </a>
-                <a href="#" class="hero-social-link hero-linkedin" target="_blank" title="LinkedIn">
+                <a href="https://linkedin.com/in/ankur-maurya25" class="hero-social-link hero-linkedin" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn Profile">
                     <i class="fa-brands fa-linkedin-in"></i>
                     <span class="hero-social-text">LinkedIn</span>
                 </a>
-                <a href="mailto:ankurmaurya3030@gmail.com" class="hero-social-link hero-mail" title="Email">
+                <a href="mailto:ankurmaurya3030@gmail.com" class="hero-social-link hero-mail" title="Email" aria-label="Send Email">
                     <i class="fa-solid fa-envelope"></i>
                     <span class="hero-social-text">Email</span>
                 </a>
@@ -317,6 +329,11 @@
                 <div class="project-content">
                     <h3 class="project-name">RideX AI</h3>
                     <p class="project-text">Smart Bike Rental Website — book, track and manage bike rentals with an AI-powered interface.</p>
+                    <ul class="project-features">
+                        <li><i class="fa-solid fa-check"></i> Book bike rentals</li>
+                        <li><i class="fa-solid fa-check"></i> Track and manage rentals</li>
+                        <li><i class="fa-solid fa-check"></i> Dynamic web interface</li>
+                    </ul>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
@@ -337,6 +354,11 @@
                 <div class="project-content">
                     <h3 class="project-name">InvoiceFlow</h3>
                     <p class="project-text">Smart Invoice Generator — create, manage and export professional invoices instantly.</p>
+                    <ul class="project-features">
+                        <li><i class="fa-solid fa-check"></i> Create professional invoices</li>
+                        <li><i class="fa-solid fa-check"></i> Manage invoices instantly</li>
+                        <li><i class="fa-solid fa-check"></i> Export invoices</li>
+                    </ul>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
@@ -357,6 +379,10 @@
                 <div class="project-content">
                     <h3 class="project-name">LookVastrAI</h3>
                     <p class="project-text">AI Fashion Stylist — get personalised outfit recommendations powered by artificial intelligence.</p>
+                    <ul class="project-features">
+                        <li><i class="fa-solid fa-check"></i> Outfit recommendations</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time Firebase integration</li>
+                    </ul>
                     <div class="project-tags">
                         <span class="project-tag">HTML</span>
                         <span class="project-tag">CSS</span>
@@ -562,10 +588,10 @@
                 </div>
             </div>
             <div class="contact-social">
-                <a href="#" class="contact-social-btn" target="_blank">
+                <a href="https://github.com/ankur-maurya25" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                     <i class="fa-brands fa-github"></i> <span>GitHub</span>
                 </a>
-                <a href="#" class="contact-social-btn contact-linkedin" target="_blank">
+                <a href="https://linkedin.com/in/ankur-maurya25" class="contact-social-btn contact-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                     <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
                 </a>
             </div>
@@ -639,9 +665,9 @@
             <div class="footer-connect">
                 <p class="footer-title">Connect</p>
                 <div class="footer-social-list">
-                    <a href="#" class="footer-social-icon" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="#" class="footer-social-icon footer-icon-linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="mailto:ankurmaurya3030@gmail.com" class="footer-social-icon footer-icon-mail"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/ankur-maurya25" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ankur-maurya25" class="footer-social-icon footer-icon-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:ankurmaurya3030@gmail.com" class="footer-social-icon footer-icon-mail" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -650,7 +676,7 @@
         </div>
     </footer>
 
-    <button class="back-top" id="backTop">
+    <button class="back-top" id="backTop" aria-label="Back to Top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
