@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Ankur Maurya</title>
     <link href="assests/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
+        <link rel="icon" type="image/png" href="assests/images/logo.png">
         .resume-container {
             max-width: 1200px;
             margin: 120px auto 50px auto;
             padding: 0 20px;
         }
+
         .resume-header-section {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
@@ -25,6 +29,7 @@
             box-shadow: 0 10px 30px rgba(109, 40, 217, 0.1);
             margin-bottom: 40px;
         }
+
         .resume-profile-img {
             width: 200px;
             height: 200px;
@@ -33,27 +38,32 @@
             border: 5px solid #fff;
             box-shadow: 0 10px 20px rgba(109, 40, 217, 0.2);
         }
+
         .resume-header-info h1 {
             font-size: 42px;
             color: #1f2937;
             margin-bottom: 10px;
         }
+
         .resume-header-info h1 span {
             background: linear-gradient(135deg, #6d28d9, #2563eb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .resume-job-title {
             font-size: 24px;
             color: #475569;
             font-weight: 500;
             margin-bottom: 20px;
         }
+
         .resume-contact-list {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
         }
+
         .resume-contact-item {
             display: flex;
             align-items: center;
@@ -65,14 +75,17 @@
             color: #475569;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
+
         .resume-contact-item i {
             color: #6d28d9;
         }
+
         .resume-actions {
             margin-top: 25px;
             display: flex;
             gap: 15px;
         }
+
         .resume-btn {
             display: inline-flex;
             align-items: center;
@@ -84,27 +97,32 @@
             background: linear-gradient(135deg, #6d28d9, #2563eb);
             box-shadow: 0 8px 20px rgba(109, 40, 217, 0.25);
         }
+
         .resume-btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 28px rgba(109, 40, 217, 0.35);
             color: #fff;
         }
+
         .resume-btn-secondary {
             background: #fff;
             color: #6d28d9;
             border: 2px solid #ede9fe;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
         }
+
         .resume-btn-secondary:hover {
             border-color: #c4b5fd;
             background: #f8faff;
             color: #6d28d9;
         }
+
         .resume-grid {
             display: grid;
             grid-template-columns: 1fr 2fr;
             gap: 30px;
         }
+
         .resume-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(10px);
@@ -115,10 +133,12 @@
             margin-bottom: 30px;
             transition: 0.3s;
         }
+
         .resume-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(109, 40, 217, 0.1);
         }
+
         .resume-section-title {
             font-size: 22px;
             color: #1f2937;
@@ -129,22 +149,26 @@
             border-bottom: 2px solid #ede9fe;
             padding-bottom: 10px;
         }
+
         .resume-section-title i {
             color: #6d28d9;
             font-size: 24px;
         }
+
         .resume-text {
             color: #475569;
             line-height: 1.7;
             font-size: 15px;
             margin-bottom: 15px;
         }
+
         .resume-timeline-item {
             position: relative;
             padding-left: 25px;
             margin-bottom: 25px;
             border-left: 2px solid #c4b5fd;
         }
+
         .resume-timeline-item::before {
             content: "";
             position: absolute;
@@ -155,22 +179,26 @@
             border-radius: 50%;
             background: #6d28d9;
         }
+
         .resume-item-title {
             font-weight: 600;
             color: #1f2937;
             font-size: 17px;
         }
+
         .resume-item-subtitle {
             color: #6d28d9;
             font-size: 14px;
             font-weight: 500;
             margin-bottom: 8px;
         }
+
         .resume-tag-container {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
+
         .resume-tag {
             background: #ede9fe;
             color: #6d28d9;
@@ -179,9 +207,11 @@
             font-size: 13px;
             font-weight: 500;
         }
+
         .resume-list {
             list-style: none;
         }
+
         .resume-list li {
             position: relative;
             padding-left: 25px;
@@ -189,50 +219,65 @@
             color: #475569;
             font-size: 15px;
         }
+
         .resume-list li i {
             position: absolute;
             left: 0;
             top: 4px;
             color: #6d28d9;
         }
+
         @media (max-width: 991px) {
             .resume-grid {
                 grid-template-columns: 1fr;
             }
+
             .resume-header-section {
                 flex-direction: column;
                 text-align: center;
             }
+
             .resume-contact-list {
                 justify-content: center;
             }
+
             .resume-actions {
                 justify-content: center;
             }
         }
+
         @media print {
             body {
                 background: #fff;
             }
-            .header, .footer, .back-top, .resume-actions, .side-menu {
+
+            .header,
+            .footer,
+            .back-top,
+            .resume-actions,
+            .side-menu {
                 display: none !important;
             }
+
             .resume-container {
                 margin: 0;
                 padding: 0;
             }
-            .resume-header-section, .resume-card {
+
+            .resume-header-section,
+            .resume-card {
                 box-shadow: none;
                 border: none;
             }
         }
     </style>
 </head>
+
 <body>
     <header class="header">
         <nav class="nav">
             <div class="nav-logo">
-                <img src="images/logo.png" alt="logo" class="nav-img">
+                <img src="assests/images/logo.png" alt="logo" class="nav-img">
                 <div class="nav-text">
                     <h2><i><b>Ankur Maurya</b></i></h2>
                 </div>
@@ -253,7 +298,7 @@
                 </div>
             </div>
         </nav>
-        
+
         <div class="side-menu" id="sideMenu">
             <span class="side-menu-close" id="closeBtn">&times;</span>
             <div class="side-menu-user">
@@ -277,7 +322,7 @@
             <div class="resume-header-info">
                 <h1>Ankur <span>Maurya</span></h1>
                 <div class="resume-job-title">PHP Full Stack Developer</div>
-                
+
                 <div class="resume-contact-list">
                     <div class="resume-contact-item">
                         <i class="fa-solid fa-envelope"></i> ankurmaurya3030@gmail.com
@@ -288,19 +333,20 @@
                     <div class="resume-contact-item">
                         <i class="fa-solid fa-location-dot"></i> Lucknow, Uttar Pradesh, India
                     </div>
-                    <a href="https://www.linkedin.com/in/ankur-maurya-35783b38a/" class="resume-contact-item" target="_blank">
+                    <a href="https://www.linkedin.com/in/ankur-maurya-35783b38a/" class="resume-contact-item"
+                        target="_blank">
                         <i class="fa-brands fa-linkedin"></i> LinkedIn
                     </a>
                     <a href="https://github.com/ankur-maurya25" class="resume-contact-item" target="_blank">
                         <i class="fa-brands fa-github"></i> GitHub
                     </a>
                 </div>
-                
+
                 <div class="resume-actions">
                     <button class="resume-btn" onclick="window.print()">
                         <i class="fa-solid fa-print"></i> Print Resume
                     </button>
-                    
+
                 </div>
             </div>
         </div>
@@ -310,30 +356,36 @@
                 <div class="resume-card" data-animate="fade-right">
                     <h2 class="resume-section-title"><i class="fa-solid fa-user-tie"></i> About Me</h2>
                     <p class="resume-text">
-                        I'm Ankur Maurya, a B.Tech IT student and a passionate Full Stack Web Developer. I love building modern, responsive and user-friendly websites and web applications. I enjoy turning complex problems into simple, beautiful and intuitive solutions.
+                        I'm Ankur Maurya, a B.Tech IT student and a passionate Full Stack Web Developer. I love building
+                        modern, responsive and user-friendly websites and web applications. I enjoy turning complex
+                        problems into simple, beautiful and intuitive solutions.
                     </p>
                 </div>
 
                 <div class="resume-card" data-animate="fade-right">
                     <h2 class="resume-section-title"><i class="fa-solid fa-bullseye"></i> Career Objective</h2>
                     <p class="resume-text">
-                        To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills. Seeking an entry-level position to begin my career in a high-level professional environment.
+                        To secure a challenging position in a reputable organization to expand my learnings, knowledge,
+                        and skills. Seeking an entry-level position to begin my career in a high-level professional
+                        environment.
                     </p>
                 </div>
 
                 <div class="resume-card" data-animate="fade-right">
                     <h2 class="resume-section-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
-                    
+
                     <div class="resume-timeline-item">
                         <div class="resume-item-title">B.Tech in Information Technology</div>
                         <div class="resume-item-subtitle">Ongoing | XYZ University</div>
-                        <p class="resume-text">Focusing on modern web development technologies, software engineering principles, and data structures.</p>
+                        <p class="resume-text">Focusing on modern web development technologies, software engineering
+                            principles, and data structures.</p>
                     </div>
-                    
+
                     <div class="resume-timeline-item">
                         <div class="resume-item-title">Higher Secondary Education</div>
                         <div class="resume-item-subtitle">XYZ College</div>
-                        <p class="resume-text">Completed with strong fundamentals in Mathematics and Computer Science.</p>
+                        <p class="resume-text">Completed with strong fundamentals in Mathematics and Computer Science.
+                        </p>
                     </div>
                 </div>
 
@@ -352,13 +404,14 @@
                     <div class="resume-timeline-item">
                         <div class="resume-item-title">Fresher</div>
                         <div class="resume-item-subtitle">Currently seeking opportunities</div>
-                        <p class="resume-text">Open to internships, freelance projects, and full-time roles to apply my skills in web development.</p>
+                        <p class="resume-text">Open to internships, freelance projects, and full-time roles to apply my
+                            skills in web development.</p>
                     </div>
                 </div>
-                
+
                 <div class="resume-card" data-animate="fade-left">
                     <h2 class="resume-section-title"><i class="fa-solid fa-laptop-code"></i> Skills</h2>
-                    
+
                     <h3 class="resume-item-title" style="margin-bottom: 10px;">Technical Skills</h3>
                     <div class="resume-tag-container" style="margin-bottom: 20px;">
                         <span class="resume-tag">HTML5</span>
@@ -384,32 +437,39 @@
 
                 <div class="resume-card" data-animate="fade-left">
                     <h2 class="resume-section-title"><i class="fa-solid fa-folder-open"></i> Projects</h2>
-                    
+
                     <div class="resume-timeline-item">
                         <div class="resume-item-title">RideX AI</div>
                         <div class="resume-item-subtitle">HTML, CSS, JavaScript, PHP, MySQL</div>
-                        <p class="resume-text">Smart Bike Rental Website. Features include booking, tracking, and managing bike rentals with an AI-powered interface.</p>
+                        <p class="resume-text">Smart Bike Rental Website. Features include booking, tracking, and
+                            managing bike rentals with an AI-powered interface.</p>
                     </div>
-                    
+
                     <div class="resume-timeline-item">
                         <div class="resume-item-title">InvoiceFlow</div>
                         <div class="resume-item-subtitle">HTML, CSS, JavaScript, PHP, MySQL</div>
-                        <p class="resume-text">Smart Invoice Generator. Allows users to create, manage, and export professional invoices instantly.</p>
+                        <p class="resume-text">Smart Invoice Generator. Allows users to create, manage, and export
+                            professional invoices instantly.</p>
                     </div>
 
                     <div class="resume-timeline-item">
                         <div class="resume-item-title">LookVastrAI</div>
                         <div class="resume-item-subtitle">HTML, CSS, JavaScript, Firebase</div>
-                        <p class="resume-text">AI Fashion Stylist providing personalised outfit recommendations powered by artificial intelligence.</p>
+                        <p class="resume-text">AI Fashion Stylist providing personalised outfit recommendations powered
+                            by artificial intelligence.</p>
                     </div>
                 </div>
-                
+
                 <div class="resume-card" data-animate="fade-left">
-                    <h2 class="resume-section-title"><i class="fa-solid fa-certificate"></i> Internship / Training & Certifications</h2>
+                    <h2 class="resume-section-title"><i class="fa-solid fa-certificate"></i> Internship / Training &
+                        Certifications</h2>
                     <ul class="resume-list">
-                        <li><i class="fa-solid fa-award"></i> <strong>PHP Full Stack Developer Training</strong> - Techsima Solution Pvt Ltd</li>
-                        <li><i class="fa-solid fa-award"></i> <strong>Certificate of Excellence</strong> - Techsima Solution Pvt Ltd</li>
-                        <li><i class="fa-solid fa-award"></i> <strong>C Language Certification</strong> - GeeksforGeeks</li>
+                        <li><i class="fa-solid fa-award"></i> <strong>PHP Full Stack Developer Training</strong> -
+                            Techsima Solution Pvt Ltd</li>
+                        <li><i class="fa-solid fa-award"></i> <strong>Certificate of Excellence</strong> - Techsima
+                            Solution Pvt Ltd</li>
+                        <li><i class="fa-solid fa-award"></i> <strong>C Language Certification</strong> - GeeksforGeeks
+                        </li>
                         <li><i class="fa-solid fa-award"></i> <strong>Git Certification</strong> - GeeksforGeeks</li>
                         <li><i class="fa-solid fa-award"></i> <strong>S.C.O.A. Certification</strong> - Flipkart</li>
                     </ul>
@@ -418,9 +478,12 @@
                 <div class="resume-card" data-animate="fade-left">
                     <h2 class="resume-section-title"><i class="fa-solid fa-trophy"></i> Achievements</h2>
                     <ul class="resume-list">
-                        <li><i class="fa-solid fa-star"></i> Successfully developed and deployed 3+ major full stack projects.</li>
-                        <li><i class="fa-solid fa-star"></i> Mastered frontend and backend technologies within 6 months.</li>
-                        <li><i class="fa-solid fa-star"></i> Active contributor to GitHub repositories and coding communities.</li>
+                        <li><i class="fa-solid fa-star"></i> Successfully developed and deployed 3+ major full stack
+                            projects.</li>
+                        <li><i class="fa-solid fa-star"></i> Mastered frontend and backend technologies within 6 months.
+                        </li>
+                        <li><i class="fa-solid fa-star"></i> Active contributor to GitHub repositories and coding
+                            communities.</li>
                     </ul>
                 </div>
             </div>
@@ -439,24 +502,20 @@
             <div class="footer-links">
                 <p class="footer-title">Quick Links</p>
                 <div class="footer-nav">
-                    <a href="index.html#home" class="footer-link">Home</a>
-                    <a href="index.html#about" class="footer-link">About</a>
-                    <a href="index.html#skills" class="footer-link">Skills</a>
-                    <a href="index.html#projects" class="footer-link">Projects</a>
-                    <a href="index.html#certificates" class="footer-link">Certificates</a>
-                    <a href="index.html#contact" class="footer-link">Contact</a>
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#skills" class="footer-link">Skills</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#certificates" class="footer-link">Certificates</a>
+                    <a href="#contact" class="footer-link">Contact</a>
                 </div>
             </div>
             <div class="footer-connect">
                 <p class="footer-title">Connect</p>
                 <div class="footer-social-list">
-                    <a href="https://github.com/ankur-maurya25" target="_blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-github"></i>
-</a>
-                    <a href="https://www.linkedin.com/in/ankur-maurya-35783b38a/" target="_blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-linkedin-in"></i>
-</a>
-                    <a href="mailto:ankurmaurya3030@gmail.com" class="footer-social-icon footer-icon-mail"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://github.com/ankur-maurya25" class="footer-social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ankur-maurya25" class="footer-social-icon footer-icon-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:ankurmaurya3030@gmail.com" class="footer-social-icon footer-icon-mail" aria-label="Send Email"><i class="fa-solid fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -471,4 +530,5 @@
 
     <script src="assests/js/script.js"></script>
 </body>
+
 </html>
