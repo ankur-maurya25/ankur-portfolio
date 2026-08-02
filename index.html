@@ -558,18 +558,20 @@
         </div>
     </section>
 
-    <section class="contact" id="contact">
+      <section class="contact" id="contact">
         <div class="contact-left" data-animate="fade-left">
             <span class="contact-label">GET IN TOUCH</span>
             <h2 class="contact-title">Let's <span class="contact-highlight">Talk</span></h2>
             <div class="contact-line"></div>
-            <p class="contact-desc">I'm currently open to freelance projects, internships and full-time opportunities. Feel free to reach out — I'd love to connect!</p>
+            <p class="contact-desc">I'm currently open to freelance projects, internships and full-time opportunities.
+                Feel free to reach out — I'd love to connect!</p>
             <div class="contact-list">
                 <div class="contact-item">
                     <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
                     <div class="contact-text">
                         <span class="contact-item-label">Email</span>
-                        <a href="mailto:ankurmaurya3030@gmail.com" class="contact-item-value">ankurmaurya3030@gmail.com</a>
+                        <a href="mailto:ankurmaurya3030@gmail.com"
+                            class="contact-item-value">ankurmaurya3030@gmail.com</a>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -588,22 +590,23 @@
                 </div>
             </div>
             <div class="contact-social">
-                <a href="https://github.com/ankur-maurya25" class="contact-social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <a href="#" class="contact-social-btn" target="_blank">
                     <i class="fa-brands fa-github"></i> <span>GitHub</span>
                 </a>
-                <a href="https://linkedin.com/in/ankur-maurya25" class="contact-social-btn contact-linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <a href="#" class="contact-social-btn contact-linkedin" target="_blank">
                     <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
                 </a>
             </div>
         </div>
         <div class="contact-right" data-animate="fade-right">
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/xwvggkby" method="POST">
                 <div class="contact-row">
                     <div class="contact-group">
                         <label class="contact-input-label">Full Name</label>
                         <div class="contact-input-box">
                             <i class="fa-solid fa-user contact-input-icon"></i>
-                            <input type="text" id="contactName" class="contact-input" placeholder="Your full name">
+                            <input type="text" id="contactName" name="name" class="contact-input"
+                                placeholder="Your full name" required>
                         </div>
                         <span class="contact-error" id="nameError">Please enter your name.</span>
                     </div>
@@ -611,7 +614,8 @@
                         <label class="contact-input-label">Email Address</label>
                         <div class="contact-input-box">
                             <i class="fa-solid fa-envelope contact-input-icon"></i>
-                            <input type="email" id="contactEmail" class="contact-input" placeholder="your@email.com">
+                            <input type="email" id="contactEmail" name="email" class="contact-input"
+                                placeholder="your@email.com" required>
                         </div>
                         <span class="contact-error" id="emailError">Please enter a valid email.</span>
                     </div>
@@ -620,7 +624,8 @@
                     <label class="contact-input-label">Subject</label>
                     <div class="contact-input-box">
                         <i class="fa-solid fa-tag contact-input-icon"></i>
-                        <input type="text" id="contactSubject" class="contact-input" placeholder="What is this about?">
+                        <input type="text" id="contactSubject" name="subject" class="contact-input"
+                            placeholder="What is this about?" required>
                     </div>
                     <span class="contact-error" id="subjectError">Please enter a subject.</span>
                 </div>
@@ -628,12 +633,14 @@
                     <label class="contact-input-label">Message</label>
                     <div class="contact-input-box contact-textarea-box">
                         <i class="fa-solid fa-message contact-input-icon"></i>
-                        <textarea id="contactMessage" class="contact-input contact-textarea" placeholder="Write your message here..."></textarea>
+                        <textarea id="contactMessage" name="message" class="contact-input contact-textarea"
+                            placeholder="Write your message here..." required></textarea>
                     </div>
                     <span class="contact-error" id="messageError">Please enter your message.</span>
                 </div>
                 <div class="contact-success" id="formSuccess">
-                    <i class="fa-solid fa-circle-check"></i> Message sent successfully! I'll get back to you soon.
+                    <i class="fa-solid fa-circle-check"></i>
+                    Message sent successfully! I'll get back to you soon.
                 </div>
                 <button type="submit" class="contact-btn" id="sendBtn">
                     <i class="fa-solid fa-paper-plane"></i> <span id="sendText">Send Message</span>
