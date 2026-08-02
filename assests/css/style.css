@@ -1754,6 +1754,19 @@ button:active {
     gap: 8px;
 }
 
+.contact-form-error {
+    padding: 15px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    display: none;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
 .contact-btn {
     padding: 16px;
     background: #4f46e5;

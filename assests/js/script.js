@@ -195,16 +195,51 @@ if (contactForm) {
         
         if (isValid) {
             sendText.textContent = "Sending...";
+            sendBtn.disabled = true; // Disable button during request
             
-            setTimeout(function() {
+            const formData = new FormData(contactForm);
+            const formError = document.getElementById("formError");
+            if (formError) formError.style.display = "none"; // Hide previous errors
+            
+            fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    sendText.textContent = "Send Message";
+                    sendBtn.disabled = false;
+                    contactForm.reset();
+                    formSuccess.style.display = "flex";
+                    
+                    setTimeout(function() {
+                        formSuccess.style.display = "none";
+                    }, 4000);
+                } else {
+                    response.json().then(function(data) {
+                        console.error("Formspree API Error:", data);
+                        showSubmissionError();
+                    });
+                }
+            })
+            .catch(function(error) {
+                console.error("Fetch Error:", error);
+                showSubmissionError();
+            });
+            
+            function showSubmissionError() {
                 sendText.textContent = "Send Message";
-                contactForm.reset();
-                formSuccess.style.display = "flex";
-                
-                setTimeout(function() {
-                    formSuccess.style.display = "none";
-                }, 4000);
-            }, 1000);
+                sendBtn.disabled = false;
+                if (formError) {
+                    formError.style.display = "flex";
+                    setTimeout(function() {
+                        formError.style.display = "none";
+                    }, 5000);
+                }
+            }
         }
     });
 }
